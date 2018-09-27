@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :even_categories
+  resources :event_categories
   resources :categories
   get 'home/index'
   resources :events
