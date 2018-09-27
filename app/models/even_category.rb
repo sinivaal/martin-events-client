@@ -1,0 +1,2 @@
+class EvenCategory < ApplicationRecord
+end

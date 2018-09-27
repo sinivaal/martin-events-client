@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @even_category.event_id %>
+</p>
+
+<p>
+  <strong>Categeory:</strong>
+  <%= @even_category.categeory_id %>
+</p>
+
+<%= link_to 'Edit', edit_even_category_path(@even_category) %> |
+<%= link_to 'Back', even_categories_path %>
