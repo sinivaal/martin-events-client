@@ -1,4 +1,7 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
+  get 'contact/index'
+	mount Sidekiq::Web =>'/sidekiq'
   devise_for :users
   resources :event_categories
   resources :categories

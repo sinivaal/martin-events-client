@@ -32,3 +32,5 @@
 
 #
 /.ruby-env
+secret.env
+
