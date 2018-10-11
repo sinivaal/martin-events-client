@@ -14,7 +14,7 @@ gem 'sendgrid-ruby'
 #sidekiq
 gem 'sidekiq'
 #reCAPATCHA
-gem 'recaptcha'
+gem 'recaptcha',require: "recaptcha/rails"
 
 
 
