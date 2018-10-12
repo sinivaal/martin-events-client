@@ -12,9 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 You'll need:
 
 *a computer*
-*sendgrid API key*
-*reCAPTCHA API key*
-*reCAPTCHA API secret key*
+*a computer*
+*a computer*
+*a computer*
 
 ## Making Enviroment
 
