@@ -11,12 +11,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 You'll need:
 
-*a computer
-*a computer
-*a computer
-*a computer*
+* a computer
+* SendGrid API key
+* reCAPTCHA API key
+* reCAPTCHA secret API key
 
-## Making Enviroment
+
+## Obtaining API keys
 
 This application uses sendgrid for sending emails and reCAPTCHA for validating forms. 
 
@@ -27,7 +28,6 @@ https://sendgrid.com/
 And get your reCaptcha API key:
 
 [obtain a reCAPTCHA API key](https://www.google.com/recaptcha/admin). Note: Use localhost or 127.0.0.1 in domain if using localhost:3000.
-
 
 
 
