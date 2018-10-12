@@ -14,7 +14,7 @@ You'll need:
 *a computer
 *a computer
 *a computer
-*a computer
+*a computer*
 
 ## Making Enviroment
 
@@ -32,11 +32,11 @@ Create a new file:
 ```
 touch secret.env
 ```
-and add the following:
+and add the following and replace :
 ```
-export SENDGRID_API_KEY='SENDGRID_API_KEY'
-export RECAPTCHA_SITE_KEY='YOUR_RECAPTCHA_API_KEY' 
-export RECAPTCHA_SECRET_KEY='RECAPTCHA_SECRETKEY'
+export SENDGRID_API_KEY='YOUR SENDGRID API KEY'
+export RECAPTCHA_SITE_KEY='YOUR RECAPTCHA API_KEY' 
+export RECAPTCHA_SECRET_KEY='YOUR RECAPTCHA SECRETKEY'
 ```
 
 
