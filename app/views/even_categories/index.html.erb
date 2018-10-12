@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Even Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Categeory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @even_categories.each do |even_category| %>
+      <tr>
+        <td><%= even_category.event_id %></td>
+        <td><%= even_category.categeory_id %></td>
+        <td><%= link_to 'Show', even_category %></td>
+        <td><%= link_to 'Edit', edit_even_category_path(even_category) %></td>
+        <td><%= link_to 'Destroy', even_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Even Category', new_even_category_path %>

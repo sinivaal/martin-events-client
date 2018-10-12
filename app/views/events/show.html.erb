@@ -6,6 +6,12 @@
 </p>
 
 <p>
+  <strong>Category:</strong>
+  <%=link_to(@event.try(:category).try(:name), category_path(@event.try(:category)))%>
+</p>
+
+<p>
+
   <strong>Short description:</strong>
   <%= @event.short_description %>
 </p>

@@ -5,5 +5,7 @@ class EmailWorker
     # Do something
     SendMail.new.send
 
+
+    
   end
 end

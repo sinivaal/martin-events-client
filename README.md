@@ -11,7 +11,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 You'll need:
 
-*a computer*
+* a computer
+* SendGrid API key
+* reCAPTCHA API key
+* reCAPTCHA secret API key
+
+
+## Obtaining API keys
+
+This application uses sendgrid for sending emails and reCAPTCHA for validating forms. 
+
+Make an account and get your API key at:
+
+https://sendgrid.com/
+
+And get your reCaptcha API key:
+
+[obtain a reCAPTCHA API key](https://www.google.com/recaptcha/admin). Note: Use localhost or 127.0.0.1 in domain if using localhost:3000.
+
+
 
 ### Installing
 
@@ -25,18 +43,36 @@ Opening the repo root folder:
 ```
 cd martin-events-client
 ```
-Important install (dont' ask why):
+Installing gems:
 ```
 bundle install
 ```
-Making database:
+Making database (and inserting data):
 ```
 rake db:migrate
+rake db:seed
+```
+
+Make an enviroment file:
+```
+touch secret.env
+```
+and add the following and replace with your API keys:
+```
+export SENDGRID_API_KEY='YOUR SENDGRID API KEY'
+export RECAPTCHA_SITE_KEY='YOUR RECAPTCHA API_KEY' 
+export RECAPTCHA_SECRET_KEY='YOUR RECAPTCHA SECRETKEY'
+```
+
+Running the enviroment file
+```
+source secret.env
 ```
 Starting rails server to see your result in a browser:
 ```
 rails s
 ```
+
 
 ## Built With
 

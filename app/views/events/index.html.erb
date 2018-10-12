@@ -2,12 +2,20 @@
 
 <h1>Events</h1>
 
+
 <table>
+
+<table class="table table-bordered table-striped">
+
   <thead>
     <tr>
       <th>Name</th>
       <th>Short description</th>
+
       <th>Long description</th>
+
+      <th>Category</th>
+
       <th>Price</th>
       <th>Date</th>
       <th>Location</th>
@@ -21,14 +29,24 @@
       <tr>
         <td><%= event.name %></td>
         <td><%= event.short_description %></td>
+
         <td><%= event.long_description %></td>
+
+        <td><%= link_to(event.category.name, category_path(event.category)) unless event.category.nil? %></td>
+
         <td><%= event.price %></td>
         <td><%= event.date %></td>
         <td><%= event.location %></td>
         <td><%= event.image %></td>
+
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to 'Show', event %>
+        <%= link_to 'Edit', edit_event_path(event) %>
+        <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

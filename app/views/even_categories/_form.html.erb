@@ -1,0 +1,27 @@
+<%= form_with(model: even_category, local: true) do |form| %>
+  <% if even_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(even_category.errors.count, "error") %> prohibited this even_category from being saved:</h2>
+
+      <ul>
+      <% even_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :event_id %>
+    <%= form.number_field :event_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categeory_id %>
+    <%= form.number_field :categeory_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

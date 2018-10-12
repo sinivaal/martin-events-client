@@ -10,9 +10,25 @@
   </head>
 
   <body>
-    <%= yield %>
-    <%= render partial: 'layouts/sidebar' %>
 
+    
+
+
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <div class="container">
+      <% if(current_user.present?) %>
+        <%= current_user.email %>
+        <%= link_to('Log out', destroy_user_session_path(), method: :delete) %>
+      <% end %>
+    
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+      <%= render partial: 'layouts/sidebar' %>
+    </div>
 
   </body>
 </html>
