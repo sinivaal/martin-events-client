@@ -28,16 +28,6 @@ And get your reCaptcha API key:
 
 [obtain a reCAPTCHA API key](https://www.google.com/recaptcha/admin). Note: Use localhost or 127.0.0.1 in domain if using localhost:3000.
 
-Create a new file:
-```
-touch secret.env
-```
-and add the following and replace :
-```
-export SENDGRID_API_KEY='YOUR SENDGRID API KEY'
-export RECAPTCHA_SITE_KEY='YOUR RECAPTCHA API_KEY' 
-export RECAPTCHA_SECRET_KEY='YOUR RECAPTCHA SECRETKEY'
-```
 
 
 
@@ -53,7 +43,7 @@ Opening the repo root folder:
 ```
 cd martin-events-client
 ```
-Important install (dont' ask why):
+Installing gems:
 ```
 bundle install
 ```
@@ -61,7 +51,18 @@ Making database:
 ```
 rake db:migrate
 ```
-Running the enviroment file (You will need to make enviroment file first with your own API keys, look below "Making Enviroment")
+Make an enviroment file:
+```
+touch secret.env
+```
+and add the following and replace with your API keys:
+```
+export SENDGRID_API_KEY='YOUR SENDGRID API KEY'
+export RECAPTCHA_SITE_KEY='YOUR RECAPTCHA API_KEY' 
+export RECAPTCHA_SECRET_KEY='YOUR RECAPTCHA SECRETKEY'
+```
+
+Running the enviroment file
 ```
 source secret.env
 ```
