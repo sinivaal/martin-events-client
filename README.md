@@ -16,6 +16,31 @@ You'll need:
 *reCAPTCHA API key*
 *reCAPTCHA API secret key*
 
+## Making Enviroment
+
+This application uses sendgrid for sending emails and reCAPTCHA for validating forms. 
+
+Make an account and get your API key at:
+
+https://sendgrid.com/
+
+And get your reCaptcha API key:
+
+[obtain a reCAPTCHA API key](https://www.google.com/recaptcha/admin). Note: Use localhost or 127.0.0.1 in domain if using localhost:3000.
+
+Create a new file:
+```
+touch secret.env
+```
+and add the following:
+```
+export SENDGRID_API_KEY='SENDGRID_API_KEY'
+export RECAPTCHA_SITE_KEY='YOUR_RECAPTCHA_API_KEY' 
+export RECAPTCHA_SECRET_KEY='RECAPTCHA_SECRETKEY'
+```
+
+
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development up and running
@@ -43,24 +68,6 @@ source secret.env
 Starting rails server to see your result in a browser:
 ```
 rails s
-```
-
-## Making Enviroment
-
-This application uses sendgrid for sending emails and reCAPTCHA for validating forms. 
-
-Make an account and get your API key at:
-
-https://sendgrid.com/
-
-Create a new file:
-```
-touch secret.env
-```
-and add the following:
-```
-export SENDGRID_API_KEY='SENDGRID_API_KEY'
-export RECAPTCHA_SITE_KEY='YOUR_RECAPTCHA_API_KEY' export RECAPTCHA_SECRET_KEY='RECAPTCHA_SECRETKEY'
 ```
 
 
