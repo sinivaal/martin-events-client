@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 2018_10_04_214954) do
+
 ActiveRecord::Schema.define(version: 2018_09_28_091748) do
+
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -18,9 +22,15 @@ ActiveRecord::Schema.define(version: 2018_09_28_091748) do
     t.datetime "updated_at", null: false
   end
 
+
+  create_table "event_categories", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "category_id"
+
   create_table "even_categories", force: :cascade do |t|
     t.integer "event_id"
     t.integer "categeory_id"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_09_28_091748) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
     t.boolean "featured", default: false
     t.integer "category_id"
   end
@@ -54,6 +65,7 @@ ActiveRecord::Schema.define(version: 2018_09_28_091748) do
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
   end
 
 end

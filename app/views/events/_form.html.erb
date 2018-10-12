@@ -17,6 +17,8 @@
   </div>
 
 
+
+
   <div class="field">
     <%= form.label :short_description %>
     <%= form.text_field :short_description %>
@@ -47,6 +49,7 @@
     <%= form.text_field :image %>
   </div>
 
+
   <div class="field">
     <%= form.label :featured %>
     <%= form.check_box :featured %>
@@ -56,6 +59,7 @@
     <%= form.label :category_id %>
     <%= form.collection_select(:category_id, Category.all, :id, :name) %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
