@@ -12,6 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 You'll need:
 
 *a computer*
+*sendgrid API key*
+*reCAPTCHA API key*
+*reCAPTCHA API secret key*
 
 ### Installing
 
@@ -33,10 +36,33 @@ Making database:
 ```
 rake db:migrate
 ```
+Running the enviroment file (You will need to make enviroment file first with your own API keys, look below "Making Enviroment")
+```
+source secret.env
+```
 Starting rails server to see your result in a browser:
 ```
 rails s
 ```
+
+## Making Enviroment
+
+This application uses sendgrid for sending emails and reCAPTCHA for validating forms. 
+
+Make an account and get your API key at:
+
+https://sendgrid.com/
+
+Create a new file:
+```
+touch secret.env
+```
+and add the following:
+```
+export SENDGRID_API_KEY='SENDGRID_API_KEY'
+export RECAPTCHA_SITE_KEY='YOUR_RECAPTCHA_API_KEY' RECAPTCHA_SECRET_KEY='RECAPTCHA_SECRETKEY'
+```
+
 
 ## Built With
 
