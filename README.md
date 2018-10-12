@@ -47,10 +47,12 @@ Installing gems:
 ```
 bundle install
 ```
-Making database:
+Making database (and inserting data):
 ```
 rake db:migrate
+rake db:seed
 ```
+
 Make an enviroment file:
 ```
 touch secret.env
