@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_09_28_091748) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "even_categories", force: :cascade do |t|
+  create_table "event_categories", force: :cascade do |t|
     t.integer "event_id"
     t.integer "categeory_id"
     t.datetime "created_at", null: false
