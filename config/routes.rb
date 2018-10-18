@@ -1,5 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+	post 'api/haiku'
   get 'api/about'
   get 'contact/index'
 	mount Sidekiq::Web =>'/sidekiq'
