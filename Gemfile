@@ -17,6 +17,8 @@ gem 'sidekiq'
 gem 'recaptcha',require: "recaptcha/rails"
 #capistano rvm, something, something
 gem 'capistrano-rvm'
+#something something
+gem 'capistrano-passenger'
 
 
 
